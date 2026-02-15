@@ -21,13 +21,19 @@ from ultralytics import YOLO
 def load_model() -> YOLO:
     """Load the trained YOLOv8 segmentation model."""
     project_root = Path(__file__).resolve().parent
-    model_path = project_root / "runs" / "segment" / "train6" / "weights" / "best.pt"
+    # Use the model file in the root directory for deployment
+    model_path = project_root / "best.pt"
 
     if not model_path.is_file():
-        raise FileNotFoundError(
-            f"Model weights not found at {model_path}. "
-            "Make sure training has finished and best.pt exists."
-        )
+        # Fallback to local training path if root file not found (legacy support)
+        local_path = project_root / "runs" / "segment" / "train6" / "weights" / "best.pt"
+        if local_path.is_file():
+            model_path = local_path
+        else:
+            raise FileNotFoundError(
+                f"Model weights not found at {model_path}. "
+                "Make sure 'best.pt' is in the root directory."
+            )
 
     return YOLO(str(model_path))
 
