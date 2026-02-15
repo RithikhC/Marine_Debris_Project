@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# IDEs
+.vscode/
+.idea/
+
+# Project Specific
+runs/
+datasets/
+raw_data/
+*.pt
+!yolov8n-seg.pt
+*.yaml
+!data.yaml
+
+# Streamlit
+.streamlit/

@@ -1,0 +1,7 @@
+path: ./datasets  # root dir
+train: train/images
+val: val/images
+
+names:
+  0: Debris
+  1: Marine_Life
