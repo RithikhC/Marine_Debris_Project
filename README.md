@@ -75,7 +75,7 @@ The model effectively eliminates false positives caused by "Biological Mimicry" 
 python -m venv venv
 source venv/bin/activate  
 
-# On Windows use: venv\Scripts\activate
+On Windows use: venv\Scripts\activate
 
 4. **Install dependencies**
    
