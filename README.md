@@ -71,11 +71,14 @@ The model effectively eliminates false positives caused by "Biological Mimicry" 
    git clone [https://github.com/your-username/marine-debris-detection.git](https://github.com/your-username/marine-debris-detection.git)
 
 2. **Create a virtual environment (optional but recommended)**
+   
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
-3. **Install dependencies**
+4. **Install dependencies**
+   
 pip install -r requirements.txt
 
-4. **Run the Streamlit Dashboard**
+5. **Run the Streamlit Dashboard**
+   
 streamlit run app.py
