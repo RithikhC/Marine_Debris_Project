@@ -56,31 +56,26 @@ The model effectively eliminates false positives caused by "Biological Mimicry" 
 
 ---
 
+## Component Breakdown
+**Preprocessing (CLAHE):** Contrast Limited Adaptive Histogram Equalization neutralizes turbidity and sharpens morphological edges.
+
+**Backbone & Neck (YOLOv8s):** Modified CSPDarknet and PANet extract deep semantic features to distinguish synthetic trash from organic marine life.
+
+**Dual-Head Processing:** Parallel processing of bounding box/class predictions and prototype mask generation.
+
+**Post-Processing (NMS):** Non-Maximum Suppression cleans up duplicate overlapping detections.
+
 ## 🚀 Installation & Usage
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/your-username/marine-debris-detection.git](https://github.com/your-username/marine-debris-detection.git)
 
-Component Breakdown
-Preprocessing (CLAHE): Contrast Limited Adaptive Histogram Equalization neutralizes turbidity and sharpens morphological edges.
-
-Backbone & Neck (YOLOv8s): Modified CSPDarknet and PANet extract deep semantic features to distinguish synthetic trash from organic marine life.
-
-Dual-Head Processing: Parallel processing of bounding box/class predictions and prototype mask generation.
-
-Post-Processing (NMS): Non-Maximum Suppression cleans up duplicate overlapping detections.
-
-⚙️ Installation & Setup
-1. Clone the repository
-git clone [https://github.com/your-username/marine-debris-detection.git](https://github.com/your-username/marine-debris-detection.git)
-cd marine-debris-detection
-
-2. Create a virtual environment (optional but recommended)
+2. **Create a virtual environment (optional but recommended)**
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
-3. Install dependencies
+3. **Install dependencies**
 pip install -r requirements.txt
 
-4. Run the Streamlit Dashboard
+4. **Run the Streamlit Dashboard**
 streamlit run app.py
